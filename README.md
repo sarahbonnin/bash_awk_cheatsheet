@@ -41,7 +41,9 @@ cmp --silent file1 file2 || echo "files are different"
 ```
 
 ### Empty folder from all files except files with .fastq extension
+```
 shopt -s extglob nocaseglob; rm !(*.fastq)
+```
 
 ### Remove "_" in front of files/directory names
 ```
@@ -131,13 +133,9 @@ awk '/^@M00724/{a=1;next}/^+$/{a=0}a' file
 ### Extract sequence from fastq files
 ```
 zcat read1.fastq.gz | awk '/^@HWI/{a=1;next}/^+$/{a=0}a' > sequences_read1.txt
-```
-or
-```
+# or
 zcat read1.fastq.gz | awk '0==(NR + 2) %4' > sequences_read1.txt
-```
-or
-```
+# or
 zcat read1.fastq.gz | paste - - - - | cut -f2
 ```
 
