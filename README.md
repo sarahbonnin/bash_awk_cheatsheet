@@ -4,10 +4,14 @@
 
 ### Archive
 ```
-# archive and compress
+# archive and compress in tar.gz format
 tar -zcvf archive-name.tar.gz directory-name
-# uncompress and unarchive
+# uncompress and unarchive tar.gz archives
 tar -zxvf archive-name.tar.gz
+# archive and compress in zip format
+zip -r folder.zip folder
+# uncompress and unarchive zip archives
+unzip folder.zip
 ```
 
 ### Save standard output / error
