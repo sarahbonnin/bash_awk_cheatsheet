@@ -32,8 +32,6 @@ at 10am Jul 31 < test.sh
 echo "sh test.sh.sh" | at 11am Aug 15
 ```
 
-### 
-
 ### Remove spaces from file names
 ```
 find -name "* *" -type f | rename 's/ /_/g'
@@ -168,6 +166,9 @@ awk '{printf "%s\t%.0f\t%.0f\n", $1,$2,$3}' file
 awk -v a=$i -v b=$g '$2==a && $3==b {print}' file
 ```
 
-
+### Sum column 2
+``` 
+awk '{sum += $2} END {print sum}' inputfilename
+```
 
 
