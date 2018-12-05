@@ -37,6 +37,11 @@ echo "sh test.sh.sh" | at 11am Aug 15
 find -name "* *" -type f | rename 's/ /_/g'
 ```
 
+### Remove files from /tmp if size is 0
+```
+find /tmp -size  0 -print0 |xargs -0 rm --
+```
+
 ### check if files are identical
 ```
 cmp --silent file1 file2 || echo "files are different"
