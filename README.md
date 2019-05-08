@@ -1,5 +1,5 @@
 ---
-permalink: /schedule/
+permalink: /
 ---
 # shell_awk_cheatsheet
 
