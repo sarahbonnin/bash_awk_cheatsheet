@@ -1,0 +1,10 @@
+- text: Home
+  url: /
+- text: schedule
+  url: /schedule/
+  subitems:
+    - text: week 1
+      url: /schedule/week_1/
+      subitems:
+        - text: week2
+          url: /schedule/week_2/
