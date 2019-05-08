@@ -1,6 +1,3 @@
----
-permalink: /
----
 # shell_awk_cheatsheet
 
 ## Shell
