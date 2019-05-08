@@ -1,3 +1,6 @@
+---
+permalink: /schedule/
+---
 # shell_awk_cheatsheet
 
 ## Shell
