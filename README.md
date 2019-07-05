@@ -135,6 +135,9 @@ awk '/ATTGGC/{for(x=NR-1;x<=NR+2;x++)d[x];}{a[NR]=$0}END{for(i=1;i<=NR;i++)if(!(
 ### Select lines between pattern "@M99724" and "+"
 ```
 awk '/^@M00724/{a=1;next}/^+$/{a=0}a' file
+
+# passing an argument
+awk -v id=@M00724 '$0 ~ id {a=1;next}/^>/{a=0}a' file
 ```
 
 ### Extract sequence from fastq files
