@@ -42,6 +42,11 @@ find -name "* *" -type f | rename 's/ /_/g'
 find /tmp -size  0 -print0 |xargs -0 rm --
 ```
 
+### gzip all files in current directory with extensions .txt, .fa and .bed
+```
+find . \( -name '*.txt' -o -name '*.fa' -o -name '*.bed' \) -exec gzip {} \;
+```
+
 ### check if files are identical
 ```
 cmp --silent file1 file2 || echo "files are different"
